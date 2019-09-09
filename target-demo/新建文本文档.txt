@@ -1,0 +1,1 @@
+java -Xbootclasspath/a:lib/gson-2.8.2.jar;lib/jaxb-api-2.3.0.jar;lib/mssql-jdbc-6.2.2.jre8.jar;lib/postgresql-42.1.4.jar;lib/sql-1.0.jar;lib/sql2-1.0.jar; -jar Migrate2Postgres-1.0.7.jar dml MsSqlAWT2Postgres.conf
