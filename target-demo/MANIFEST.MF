@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Created-By: Maven Archiver 3.4.0
-Build-Jdk-Spec: 11
-Implementation-Title: Migrate2Postgres
-Implementation-Version: 1.0.7
-Class-Path:lib/mssql-jdbc-6.2.2.jre8.jar lib/postgresql-42.1.4.jar lib/jtds-1.3.1.jar  lib/gson-2.8.2.jar lib/jaxb-api-2.3.0.jar lib/sql-1.0.jar lib/sql2-1.0.jar
-Main-Class: net.twentyonesolutions.m2pg.PgMigrator
-
