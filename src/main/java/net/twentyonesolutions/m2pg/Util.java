@@ -294,7 +294,7 @@ public class Util {
 
             return executeQueries(queries, log, config.connect(config.target));
         }
-        catch (SQLException ex){
+        catch (SQLException  ex){
             ex.printStackTrace();
             log.append(getStackTraceAsString(ex));
             return false;

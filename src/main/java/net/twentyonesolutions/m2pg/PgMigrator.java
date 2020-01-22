@@ -45,7 +45,6 @@ public class PgMigrator {
 
 
     public static void main(String[] args) throws Exception {
-       // args = new String[]{"dml","E:\\Work\\nv\\Migrate2Postgres-master\\MsSqlAWT2Postgres.conf"};
         System.out.println(DISCL + "\n");
 
         if (args.length == 0){

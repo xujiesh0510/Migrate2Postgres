@@ -96,7 +96,7 @@ public class Schema {
     }
 
 
-    public String copyTable(String tableName, IProgress progress) throws IOException {
+    public String copyTable(String tableName, IProgress progress)  {
 
         StringBuilder log = new StringBuilder(1024);
 
@@ -197,6 +197,11 @@ public class Schema {
                 Object[] values = new Object[columnCount];
                 for (int i = 1; i <= columnCount; i++) {
                     Object value = rs.getObject(i);
+                    if(value instanceof  String ){
+                        if(value != null){
+                            value = ((String) value).replace("\0","");
+                        }
+                    }
                     values[i - 1] = value;
 					statInsert.setObject(i, value, columnTypes[i - 1]); // throws java.sql.SQLFeatureNotSupportedException: Method org.postgresql.jdbc.PgPreparedStatement.setObject is not yet implemented.					                                    
                 }

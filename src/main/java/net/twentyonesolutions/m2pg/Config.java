@@ -289,12 +289,16 @@ public class Config {
 
 
     public Connection connect(String connectionName) throws SQLException {
-
+        try{
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+        }
+        catch (ClassNotFoundException EX){
+            throw  new SQLException("xxxxxxxxxxxx");
+        }
         Map<String, Object> connInfo = (Map<String, Object>) connections.get(connectionName);
 
         String connString = (String)connInfo.get("connectionString");
         Properties props = (Properties)connInfo.get("properties");
-
         Connection result = DriverManager.getConnection(connString, props);
 
         return result;
